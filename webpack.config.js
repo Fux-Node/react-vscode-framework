@@ -1,13 +1,14 @@
+/* eslint-disable @typescript-eslint/naming-convention */
 //@ts-check
 
 'use strict';
 
 const path = require('path');
 
-//@ts-check
-/** @typedef {import('webpack').Configuration} WebpackConfig **/
+const Alliases = {
+  "@src": path.resolve(__dirname, "src"),
+};
 
-/** @type WebpackConfig */
 const extensionConfig = {
   target: 'node', // VS Code extensions run in a Node.js-context 📖 -> https://webpack.js.org/configuration/node/
 	mode: 'none', // this leaves the source code as close as possible to the original (when packaging we set this to 'production')
@@ -25,7 +26,8 @@ const extensionConfig = {
   },
   resolve: {
     // support reading TypeScript and JavaScript files, 📖 -> https://github.com/TypeStrong/ts-loader
-    extensions: ['.ts', '.js']
+    extensions: ['.ts', '.js'],
+    alias : Alliases
   },
   module: {
     rules: [

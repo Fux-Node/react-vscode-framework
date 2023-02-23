@@ -1,26 +1,22 @@
-// The module 'vscode' contains the VS Code extensibility API
-// Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
+import { assignContext } from './global/store';
+import registerCommands from './commands';
 
-// This method is called when your extension is activated
-// Your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
+	/* 
+	Assigning the context for access globalStorage.
+	*/
+	assignContext(context);
 
-	// Use the console to output diagnostic information (console.log) and errors (console.error)
-	// This line of code will only be executed once when your extension is activated
-	console.log('Congratulations, your extension "demo-of-typescript" is now active!');
-
-	// The command has been defined in the package.json file
-	// Now provide the implementation of the command with registerCommand
-	// The commandId parameter must match the command field in package.json
-	let disposable = vscode.commands.registerCommand('demo-of-typescript.helloWorld', () => {
-		// The code you place here will be executed every time your command is executed
-		// Display a message box to the user
-		vscode.window.showInformationMessage('Hello World from demo-of-typescript!');
-	});
-
-	context.subscriptions.push(disposable);
+	/* 
+	Register the commands only. check the folder src/commands/index.ts file for register.
+	make sure to add your command functions would be in correct folder (public or private).
+	*/
+	registerCommands.map((reg)=>{
+		context.subscriptions.push(
+			vscode.commands.registerCommand(reg.name,reg.value)
+		)
+	})
 }
 
-// This method is called when your extension is deactivated
-export function deactivate() {}
+export function deactivate() { }
