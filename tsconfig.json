@@ -1,17 +1,35 @@
 {
 	"compilerOptions": {
-		"module": "commonjs",
 		"target": "ES2020",
 		"lib": [
-			"ES2020"
+			"dom",
+			"dom.iterable",
+			"esnext"
 		],
 		"sourceMap": true,
 		"rootDir": "src",
 		"paths": {
 			"@src/*": [
 				"./src/*"
+			],
+			"@styles/*": [
+				"./src/pages/styles/*"
 			]
 		},
-		"strict": true
-	}
+		"allowJs": true,
+		"noEmit": false,
+		"skipLibCheck": true,
+		"esModuleInterop": true,
+		"allowSyntheticDefaultImports": true,
+		"strict": true,
+		"forceConsistentCasingInFileNames": true,
+		"module": "esnext",
+		"moduleResolution": "node",
+		"resolveJsonModule": true,
+		"isolatedModules": true,
+		"jsx": "react"
+	},
+	"include": [
+		"src"
+	]
 }
