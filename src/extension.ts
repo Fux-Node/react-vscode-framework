@@ -1,7 +1,7 @@
 import * as vscode from 'vscode';
 import { assignContext } from './global/store';
 import registerCommands from './commands';
-import { default as Views, createTreeViewProvider, createWebViewPanel } from "./views"
+import { default as Views, createBasicWebViewPanel, createTreeViewProvider, createWebViewPanel } from "./views"
 
 export function activate(context: vscode.ExtensionContext) {
 	/* 
@@ -18,7 +18,7 @@ export function activate(context: vscode.ExtensionContext) {
 			vscode.commands.registerCommand(reg.name, reg.value)
 		)
 	})
-	
+
 	/* 
 	Register the webview only. check the folder src/views/web/index.ts file for register.
 	make sure to add your command functions would be in correct folder (public or private).
@@ -29,6 +29,11 @@ export function activate(context: vscode.ExtensionContext) {
 				createWebViewPanel(context, detail)
 			})
 		)
+	})
+	
+	//Basic Web view registers
+	Views.registerBasicWebviewCommand.map((detail) => {
+		createBasicWebViewPanel(context, detail.id, detail.html)
 	})
 
 	/* 

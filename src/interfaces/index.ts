@@ -1,5 +1,5 @@
 import vscode from "@src/global/vscode";
-import { ExtensionContext, WebviewPanel } from "vscode";
+import { ExtensionContext, WebviewPanel, WebviewView } from "vscode";
 
 export interface IregisterCommand {
     name: string;
@@ -10,7 +10,7 @@ export interface IwebviewRegisterCommand {
     command: string;
     name: string;
     icon: string;
-    html: (panel: WebviewPanel, context: ExtensionContext) => string;
+    html: (panel: WebviewPanel) => string;
     onClose?: () => any;
     viewColumn?: vscode.ViewColumn
 }
@@ -25,4 +25,9 @@ export interface ItreeRegisterCommand {
     command : string;
     id : string;
     data : ItreeProvideDetail
+}
+
+export interface IbasicWebviewRegisterCommand {
+    id : string;
+    html : (panel: WebviewView) => string;
 }

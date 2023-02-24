@@ -1,10 +1,10 @@
 import getNonce from "@src/functions/getNonce";
 import vscode from "@src/global/vscode";
-import { ABOUT_WEB_VIEW } from "@src/types/webview";
+import { BASIC_WEB_VIEW } from "@src/types/webview";
 import path from "path";
 
-export default function aboutWebView(
-	panel: vscode.WebviewPanel
+export default function basicWebView(
+	panel: vscode.WebviewView
   ) {
    let scriptMain = panel.webview.asWebviewUri(
 	  vscode.Uri.file(path.join(__dirname, "bundle.js"))
@@ -26,7 +26,7 @@ export default function aboutWebView(
 		  <title>Vscode Extension</title>
 	  </head>
 	  <body>
-		  <div id="${ABOUT_WEB_VIEW}"></div>
+		  <div id="${BASIC_WEB_VIEW}"></div>
 	  </body>
 	  <script nonce="${nonce}" src="${scriptMain}"></script>
 	  </html>`;
