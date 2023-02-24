@@ -14,3 +14,15 @@ export interface IwebviewRegisterCommand {
     onClose?: () => any;
     viewColumn?: vscode.ViewColumn
 }
+
+export interface ItreeProvideDetail {
+    label: string
+    children?: ItreeProvideDetail[]
+}
+
+
+export interface ItreeRegisterCommand {
+    command : string;
+    id : string;
+    data : ItreeProvideDetail
+}
