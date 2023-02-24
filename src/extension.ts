@@ -1,5 +1,5 @@
 import * as vscode from 'vscode';
-import { assignContext } from './global/store';
+import { assignContext } from './global/middlewares/store';
 import registerCommands from './commands';
 import { default as Views, createBasicWebViewPanel, createTreeViewProvider, createWebViewPanel } from "./views"
 
