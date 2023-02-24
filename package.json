@@ -22,8 +22,8 @@
         "category": "commands"
       },
       {
-        "command": "reactvscode.aboutwebview",
-        "title": "About Me",
+        "command": "reactvscode.welcomewebview",
+        "title": "Welcome Page",
         "category": "views"
       }
     ]
