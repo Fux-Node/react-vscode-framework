@@ -1,14 +1,14 @@
 let GlobalWebPanel: any = [];
 
-export const assignPanel = (key: string, value: any) => {
-    GlobalWebPanel.push({ name: key, value });
+export const assignPanel = (command: string, value: any) => {
+    GlobalWebPanel.push({ name: command, value });
 };
 
-export const clearPanel = (key: string) => {
-    GlobalWebPanel.splice(GlobalWebPanel.findIndex((i: any) => i.name === key), 1);
+export const clearPanel = (command: string) => {
+    GlobalWebPanel.splice(GlobalWebPanel.findIndex((i: any) => i.name === command), 1);
 };
 
-export const sendData = (panel: string, relation: string, data?: any) => {
-    const activePanel = GlobalWebPanel.filter((item: { name: string }) => item.name === panel)[0]?.value;
+export const sendData = (command: string, relation: string, data?: any) => {
+    const activePanel = GlobalWebPanel.filter((item: { name: string }) => item.name === command)[0]?.value;
     activePanel?.webview.postMessage({ relation, data });
 };

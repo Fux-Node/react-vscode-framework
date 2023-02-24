@@ -16,7 +16,7 @@ export const webGlobalStore = (key: string, value: any) => {
     });
 }
 
-export const webGlobalFetch = (key: string) => {
+export const webGlobalFetch = (web:string , key: string) => {
     vsCode.postMessage({
         type : "fetch",
         key
