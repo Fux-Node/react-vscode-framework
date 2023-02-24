@@ -1,0 +1,18 @@
+{
+    "label": "level json",
+    "children": [
+        {
+            "label": "level two a",
+            "children": [
+                {
+                    "label": "level three",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "label": "level two b",
+            "children": []
+        }
+    ]
+}

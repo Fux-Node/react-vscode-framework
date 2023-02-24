@@ -1,7 +1,7 @@
 import * as vscode from 'vscode';
 import { assignContext } from './global/store';
 import registerCommands from './commands';
-import { default as Views, createWebViewPanel } from "./views"
+import { default as Views, createTreeViewProvider, createWebViewPanel } from "./views"
 
 export function activate(context: vscode.ExtensionContext) {
 	/* 
@@ -27,6 +27,17 @@ export function activate(context: vscode.ExtensionContext) {
 		context.subscriptions.push(
 			vscode.commands.registerCommand(detail.command, () => {
 				createWebViewPanel(context, detail)
+			})
+		)
+	})
+
+	/* 
+	Register the tree only. check the folder src/views/tree/index.ts file for register.
+	*/
+	Views.registerTreeCommand.map((detail) => {
+		context.subscriptions.push(
+			vscode.commands.registerCommand(detail.command, () => {
+				createTreeViewProvider(detail.id, detail.data)
 			})
 		)
 	})

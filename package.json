@@ -1,9 +1,9 @@
 {
-  "name": "testing",
-  "displayName": "testing",
+  "name": "reactvscode",
+  "displayName": "React Vscode Framework",
   "description": "",
-  "publisher": "testpublisher",
-  "version": "0.0.1",
+  "publisher": "reactvscodepublisher",
+  "version": "1.0.0",
   "engines": {
     "vscode": "^1.70.0"
   },
@@ -15,16 +15,39 @@
   ],
   "main": "./dist/extension.js",
   "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "reactvscode-explorer",
+          "title": "ReactVscode Explorer",
+          "icon": "src/constants/assets/logo.svg"
+        }
+      ]
+    },
+    "views": {
+      "reactvscode-explorer": [
+        {
+          "id": "tstree",
+          "name": "Type Tree View",
+          "type": "tree"
+        }
+      ]
+    },
     "commands": [
       {
         "command": "reactvscode.helloWorld",
         "title": "Hello World",
-        "category": "commands"
+        "category": "RVF:COMMANDS"
       },
       {
-        "command": "reactvscode.aboutwebview",
-        "title": "About Me",
-        "category": "views"
+        "command": "reactvscode.welcomewebview",
+        "title": "Welcome Page",
+        "category": "RVF:WEB"
+      },
+      {
+        "command": "reactvscode.tstree",
+        "title": "Type Trees",
+        "category": "RVF:TREE"
       }
     ]
   },
