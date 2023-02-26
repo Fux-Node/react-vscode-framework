@@ -15,6 +15,8 @@ const SubBasic = () => {
   const [storeMessage, setstoreMessage] = useState("")
   const [clearMessage, setclearMessage] = useState("")
 
+  const [error, setError] = useState<string>("")
+
   const handleStore = () => {
     localSet(storeKeyInput, storeValueInput);
     setStoreKeyInput("")
@@ -23,7 +25,13 @@ const SubBasic = () => {
   }
 
   const handleFetch = async () => {
-    localGet.get(fetchKeyInput);
+    const data = await localGet(fetchKeyInput);
+    if (data === "") {
+      setfetchValueInput("")
+      return setError("No value found.")
+    } else {
+      return setfetchValueInput(data)
+    }
   }
 
   const handleClear = () => {
@@ -35,10 +43,13 @@ const SubBasic = () => {
     if (storeMessage !== "") {
       setTimeout(() => setstoreMessage(""), 5000)
     }
+    if (error !== "") {
+      setTimeout(() => setError(""), 5000)
+    }
     if (clearMessage) {
       setTimeout(() => setclearMessage(""), 5000)
     }
-  }, [storeMessage, clearMessage])
+  }, [storeMessage, clearMessage, error])
 
   return (
     <div>
@@ -50,8 +61,9 @@ const SubBasic = () => {
       {storeMessage !== "" && <h5 style={{ color: "green" }}>{storeMessage}</h5>}
       <h4>Fetch Value</h4>
       <input className='input-box' placeholder='Enter Key' value={fetchKeyInput} onChange={(e) => setfetchKeyInput(e.target.value)} />
-      <input className='input-box' placeholder='value' disabled value={localGet.result} /><br />
+      <input className='input-box' placeholder='value' disabled value={fetchValueInput} /><br />
       <button className='button-87' onClick={handleFetch}>get value</button>
+      {error !== "" && <h5 style={{ color: "red" }}>{error}</h5>}
       <h4>Clear Value</h4>
       <input className='input-box' placeholder='Enter Key' value={clearKeyInput} onChange={(e) => setclearKeyInput(e.target.value)} /><br />
       <button className='button-87' onClick={handleClear}>Clear</button>
