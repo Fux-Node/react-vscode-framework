@@ -1,4 +1,5 @@
-import { EXECUTE } from "@src/types/custom";
+import { Inotification } from "@src/interfaces";
+import { EXECUTE, NOTIFICATION } from "@src/types/custom";
 
 const vsCode = (global as any).acquireVsCodeApi();
 
@@ -35,4 +36,8 @@ export const webGlobalClear = (key: string) => {
 
 export const executeCommand = (command: string) => {
     sendCommand(EXECUTE, command)
+}
+
+export const notification = (data: Inotification) => {
+    sendCommand(NOTIFICATION, data)
 }

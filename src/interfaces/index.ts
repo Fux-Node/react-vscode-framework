@@ -40,3 +40,8 @@ export interface IreceiveMessage {
     key : string;
     data : any;
 }
+
+export interface Inotification{
+    type : "error" | "warning" | "information";
+    message : string;
+}
