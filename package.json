@@ -27,13 +27,18 @@
     "views": {
       "reactvscode-explorer": [
         {
-          "id" : "basicwebview",
-          "name": "Basic View",
+          "id": "basicwebview",
+          "name": "Local Storage Demo",
           "type": "webview"
         },
         {
           "id": "tstree",
-          "name": "Type Tree View",
+          "name": "TS Tree View",
+          "type": "tree"
+        },
+        {
+          "id": "jsontree",
+          "name": "JSON Tree View",
           "type": "tree"
         }
       ]

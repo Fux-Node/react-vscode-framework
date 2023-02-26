@@ -1,31 +1,38 @@
+import { EXECUTE } from "@src/types/custom";
+
 const vsCode = (global as any).acquireVsCodeApi();
 
-export const sendCommand = (command:string,args?:any) => {
+export const sendCommand = (command: string, args?: any) => {
     vsCode.postMessage({
-        type : "command",
+        type: "command",
         command,
-        data : args
+        data: args
     });
 };
 
 export const webGlobalStore = (key: string, value: any) => {
     vsCode.postMessage({
-        type : "store",
+        type: "store",
         key,
-        data : value
+        data: value
     });
 }
 
 export const webGlobalFetch = (key: string) => {
     vsCode.postMessage({
-        type : "fetch",
+        type: "fetch",
         key
     });
 }
 
 export const webGlobalClear = (key: string) => {
     vsCode.postMessage({
-        type : "clear",
+        type: "clear",
         key
     });
+}
+
+
+export const executeCommand = (command: string) => {
+    sendCommand(EXECUTE, command)
 }
