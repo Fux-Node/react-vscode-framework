@@ -6,28 +6,29 @@ import youtube from "@src/constants/web/buttons/youtube.png"
 import discord from "@src/constants/web/buttons/discord.png"
 import github from "@src/constants/web/buttons/github.png"
 import twitter from "@src/constants/web/buttons/twitter.png"
+import { openWeb } from '@src/global/middlewares/w2e'
 
 const SubAbout = () => {
     const detail = [
         {
             image: linkedin,
-            url: ""
+            url: "https://www.linkedin.com/in/narkreeta/"
         },
         {
             image: youtube,
-            url: ""
+            url: "https://www.youtube.com/channel/UClqkweaAkQhKTJKWDS3Tlnw"
         },
         {
             image: discord,
-            url: ""
+            url: "https://discord.gg/hACSzssXYy"
         },
         {
             image: github,
-            url: ""
+            url: "https://github.com/narkreeta"
         },
         {
             image: twitter,
-            url: ""
+            url: "https://twitter.com/narkreeta"
         }
     ]
     return (
@@ -43,7 +44,7 @@ const SubAbout = () => {
                 <div className='social-group'>
                     {detail.map((item, index) => {
                         return (
-                            <div key={index}>
+                            <div key={index} onClick={() => openWeb(item.url)}>
                                 <img src={item.image} style={{ width: "80px" }} />
                             </div>
                         )

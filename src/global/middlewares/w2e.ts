@@ -1,5 +1,5 @@
 import { Inotification } from "@src/interfaces";
-import { EXECUTE, NOTIFICATION } from "@src/types/custom";
+import { EXECUTE, NOTIFICATION, OPENWEB } from "@src/types/custom";
 
 const vsCode = (global as any).acquireVsCodeApi();
 
@@ -40,4 +40,8 @@ export const executeCommand = (command: string) => {
 
 export const notification = (data: Inotification) => {
     sendCommand(NOTIFICATION, data)
+}
+
+export const openWeb = (url: string) => {
+    sendCommand(OPENWEB, url)
 }

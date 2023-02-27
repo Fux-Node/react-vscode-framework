@@ -1,3 +1,4 @@
 export const EXECUTE = "EXECUTE";
 export const FOCUS_EXTENSION = "FOCUS_EXTENSION"
 export const NOTIFICATION = "NOTIFICATION"
+export const OPENWEB = "OPENWEB"
