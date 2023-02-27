@@ -1,4 +1,4 @@
-![Demo](https://raw.githubusercontent.com/Fux-Node/react-vscode-framework/dev/src/constants/web/card-intro.png?token=GHSAT0AAAAAAB65NEVYFCJP7XRRV6JCEUMQY74NHHQ)
+![Demo](src/constants/web/card-intro.png)
 
 
 > *Introducing the React-based VSCode Extension Framework: a powerful tool for developers and designers looking to create custom VSCode extensions with ease.*
