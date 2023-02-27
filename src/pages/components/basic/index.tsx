@@ -55,12 +55,12 @@ const SubBasic = () => {
     <div>
       <h3>Local Storage Demo</h3>
       <h4>Store Value</h4>
-      <input className='input-box' value={storeKeyInput} onChange={(e) => setStoreKeyInput(e.target.value)} placeholder='Enter Key' />
+      <input className='input-box' value={storeKeyInput} onChange={(e) => setStoreKeyInput(e.target.value)} placeholder='Enter Key' /><br />
       <input className='input-box' value={storeValueInput} onChange={(e) => setStoreValueInput(e.target.value)} placeholder='Enter value' /><br />
       <button className='button-87' onClick={handleStore}>store</button>
       {storeMessage !== "" && <h5 style={{ color: "green" }}>{storeMessage}</h5>}
       <h4>Fetch Value</h4>
-      <input className='input-box' placeholder='Enter Key' value={fetchKeyInput} onChange={(e) => setfetchKeyInput(e.target.value)} />
+      <input className='input-box' placeholder='Enter Key' value={fetchKeyInput} onChange={(e) => setfetchKeyInput(e.target.value)} /><br />
       <input className='input-box' placeholder='value' disabled value={fetchValueInput} /><br />
       <button className='button-87' onClick={handleFetch}>get value</button>
       {error !== "" && <h5 style={{ color: "red" }}>{error}</h5>}

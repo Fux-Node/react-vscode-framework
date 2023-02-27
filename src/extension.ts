@@ -2,6 +2,7 @@ import * as vscode from 'vscode';
 import { assignContext } from './global/middlewares/store';
 import registerCommands from './commands';
 import { default as Views, createBasicWebViewPanel, createTreeViewProvider, createWebViewPanel } from "./views"
+import initialize from './functions/initialize';
 
 export function activate(context: vscode.ExtensionContext) {
 	/* 
@@ -46,6 +47,13 @@ export function activate(context: vscode.ExtensionContext) {
 			})
 		)
 	})
+
+	/*
+	Call the Initialization function after register all commands.
+	*/
+	initialize()
 }
 
-export function deactivate() { }
+export function deactivate() { 
+	
+}
