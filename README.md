@@ -97,3 +97,7 @@
                  index.ts
 
 * **views** folder created inside root folder **src**. we can writer our tree views inside tree folder by following index.ts file of tree and if you want to create web view you can follow index.ts of web. click on this for [Learn more](https://docs.fuxnode.com/react-vscode-framework/views)
+
+## License
+
+Copyright (c) 2023 FUXNODE. Licensed under MIT license, see [LICENSE](LICENSE) for the full license.
