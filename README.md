@@ -33,7 +33,7 @@
              > public
                index.ts
 
-* **commands** folder created inside root folder **src**. there we have two folder private and public and one file index.ts . so if you want to show your command in publicly then you can write your functions inside public folder otherwise write this into private folder for a good practice. [Learn more](https://docs.fuxnode.com/react-vscode-framework/commands)
+* **commands** folder created inside root folder **src**. there we have two folder private and public and one file index.ts . so if you want to show your command in publicly then you can write your functions inside public folder otherwise write this into private folder for a good practice. [Learn more](https://fuxnode.com/docs#Commands)
 
 ## Constants:
         > src
@@ -41,13 +41,13 @@
              > assets
              > web
 
-* **constants** folder created inside root folder **src**. there we have two folder assets and web. so I used assets only for vscode configuration image files and those images which we need on our webview side then we can add images in web folder. [Learn more](https://docs.fuxnode.com/react-vscode-framework/constants)
+* **constants** folder created inside root folder **src**. there we have two folder assets and web. so I used assets only for vscode configuration image files and those images which we need on our webview side then we can add images in web folder. [Learn more](https://fuxnode.com/docs#Constants)
 
 ## Functions:
         > src
            > functions
 
-* **functions** folder created inside root folder **src**. we can create our regular functions inside this folder. [Learn more](https://docs.fuxnode.com/react-vscode-framework/functions)
+* **functions** folder created inside root folder **src**. we can create our regular functions inside this folder. [Learn more](https://fuxnode.com/docs#Functions)
 
 ## Global:
         > src
@@ -58,13 +58,13 @@
                       index.ts
                vscode.ts
 
-* **global** folder created inside root folder **src**. all essential functions and middleware functions created here. all functionalities mentioned in our docs so click on [Learn more](https://docs.fuxnode.com/react-vscode-framework/global)
+* **global** folder created inside root folder **src**. all essential functions and middleware functions created here. all functionalities mentioned in our docs so click on [Learn more](https://fuxnode.com/docs#Global)
 
 ## Interfaces:
         > src
            > interfaces
 
-* **interfaces** folder created inside root folder **src**. we can create our regular types inside this folder. [Learn more](https://docs.fuxnode.com/react-vscode-framework/interfaces)
+* **interfaces** folder created inside root folder **src**. we can create our regular types inside this folder. [Learn more](https://fuxnode.com/docs#Interfaces)
 
 ## Pages:
         > src
@@ -76,13 +76,13 @@
              > styles
                index.tsx
 
-* **pages** folder created inside root folder **src**. **index.tsx** file is the entry file of react js all webview design proceeds on this folder. click on this for [Learn more](https://docs.fuxnode.com/react-vscode-framework/pages)
+* **pages** folder created inside root folder **src**. **index.tsx** file is the entry file of react js all webview design proceeds on this folder. click on this for [Learn more](https://fuxnode.com/docs#Pages)
 
 ## Types:
         > src
            > types
 
-* **types** folder created inside root folder **src**. we can writer our regular command names and id inside this folder. [Learn more](https://docs.fuxnode.com/react-vscode-framework/types)
+* **types** folder created inside root folder **src**. we can writer our regular command names and id inside this folder. [Learn more](https://fuxnode.com/docs#Types)
 
 ## Views:
         > src
@@ -96,7 +96,7 @@
                > public
                  index.ts
 
-* **views** folder created inside root folder **src**. we can writer our tree views inside tree folder by following index.ts file of tree and if you want to create web view you can follow index.ts of web. click on this for [Learn more](https://docs.fuxnode.com/react-vscode-framework/views)
+* **views** folder created inside root folder **src**. we can writer our tree views inside tree folder by following index.ts file of tree and if you want to create web view you can follow index.ts of web. click on this for [Learn more](https://fuxnode.com/docs#Views)
 
 ## License
 
