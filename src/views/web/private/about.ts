@@ -4,8 +4,7 @@ import { ABOUT_WEB_VIEW } from "@src/types/webview";
 import path from "path";
 
 export default function aboutWebView(
-	panel: vscode.WebviewPanel,
-	context: vscode.ExtensionContext
+	panel: vscode.WebviewPanel
   ) {
    let scriptMain = panel.webview.asWebviewUri(
 	  vscode.Uri.file(path.join(__dirname, "bundle.js"))

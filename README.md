@@ -1,71 +1,103 @@
-# demo-of-typescript README
+![Demo](src/constants/web/card-intro.png)
 
-This is the README for your extension "demo-of-typescript". After writing up a brief description, we recommend including the following sections.
 
-## Features
+> *Introducing the React-based VSCode Extension Framework: a powerful tool for developers and designers looking to create custom VSCode extensions with ease.*
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+[twitter-shield]: https://img.shields.io/twitter/follow/fuxnode?style=social
+[twitter-url]: https://twitter.com/fuxnode
+[github-shield]: https://img.shields.io/github/stars/Fux-Node/react-vscode-framework?style=social
+[github-url]: https://github.com/Fux-Node/react-vscode-framework.git
+[youtube-shield]: https://img.shields.io/youtube/channel/views/UClqkweaAkQhKTJKWDS3Tlnw?style=social
+[youtube-url]: https://www.youtube.com/UClqkweaAkQhKTJKWDS3Tlnw
+[discord-shield]: https://dcbadge.vercel.app/api/server/hACSzssXYy?style=social
+[discord-url]: https://discord.gg/hACSzssXYy
 
-For example if there is an image subfolder under your extension project workspace:
+[![Github Repo][github-shield]][github-url]
+[![Youtube][youtube-shield]][youtube-url]
+[![Discord][discord-shield]][discord-url]
+[![Twitter Follow][twitter-shield]][twitter-url]
 
-\!\[feature X\]\(images/feature-x.png\)
+****
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+# Description:
 
-## Requirements
+#### Built on the popular React JavaScript library, this framework provides an intuitive and flexible platform for creating dynamic and responsive extensions that seamlessly integrate with the VSCode ecosystem. With support for a wide range of VSCode APIs and functionality, including editor manipulation, language services, and debugging tools, the React-based VSCode Extension Framework offers an unparalleled level of control and customization. One of the key benefits of this framework is its user-friendly interface, which allows developers to quickly and easily create, edit, and deploy extensions with minimal coding experience required. The framework comes equipped with a range of pre-built components and templates, including UI elements, menus, and commands, that can be easily customized to meet your specific needs. In addition to its ease of use, the React-based VSCode Extension Framework also offers robust functionality and flexibility. It supports a wide range of React-based tools and libraries, including Redux, React Router, and CSS-in-JS, enabling developers to create complex, multi-functional extensions with ease. The framework is also highly modular, allowing you to easily add and remove components as needed, and providing a seamless integration with other VSCode extensions and tools. Whether you're a seasoned developer or just starting out, the React-based VSCode Extension Framework is a powerful and versatile tool for creating custom VSCode extensions that meet your specific needs. With its intuitive interface, robust functionality, and flexible architecture, this framework is sure to become a go-to tool for developers and designers looking to create high-quality, customized VSCode extensions.
+****
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+# Get Started:
 
-## Extension Settings
+## Commands:
+        > src
+           > commands
+             > private
+             > public
+               index.ts
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+* **commands** folder created inside root folder **src**. there we have two folder private and public and one file index.ts . so if you want to show your command in publicly then you can write your functions inside public folder otherwise write this into private folder for a good practice. [Learn more](https://fuxnode.com/docs#Commands)
 
-For example:
+## Constants:
+        > src
+           > constants
+             > assets
+             > web
 
-This extension contributes the following settings:
+* **constants** folder created inside root folder **src**. there we have two folder assets and web. so I used assets only for vscode configuration image files and those images which we need on our webview side then we can add images in web folder. [Learn more](https://fuxnode.com/docs#Constants)
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+## Functions:
+        > src
+           > functions
 
-## Known Issues
+* **functions** folder created inside root folder **src**. we can create our regular functions inside this folder. [Learn more](https://fuxnode.com/docs#Functions)
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+## Global:
+        > src
+           > global
+             > middlewares
+                > commands
+                    > functions
+                      index.ts
+               vscode.ts
 
-## Release Notes
+* **global** folder created inside root folder **src**. all essential functions and middleware functions created here. all functionalities mentioned in our docs so click on [Learn more](https://fuxnode.com/docs#Global)
 
-Users appreciate release notes as you update your extension.
+## Interfaces:
+        > src
+           > interfaces
 
-### 1.0.0
+* **interfaces** folder created inside root folder **src**. we can create our regular types inside this folder. [Learn more](https://fuxnode.com/docs#Interfaces)
 
-Initial release of ...
+## Pages:
+        > src
+           > pages
+             > apps
+             > components
+             > context
+             > hooks
+             > styles
+               index.tsx
 
-### 1.0.1
+* **pages** folder created inside root folder **src**. **index.tsx** file is the entry file of react js all webview design proceeds on this folder. click on this for [Learn more](https://fuxnode.com/docs#Pages)
 
-Fixed issue #.
+## Types:
+        > src
+           > types
 
-### 1.1.0
+* **types** folder created inside root folder **src**. we can writer our regular command names and id inside this folder. [Learn more](https://fuxnode.com/docs#Types)
 
-Added features X, Y, and Z.
+## Views:
+        > src
+           > views
+             > tree
+               > data
+                 index.ts
+             > web
+               > base
+               > private
+               > public
+                 index.ts
 
----
+* **views** folder created inside root folder **src**. we can writer our tree views inside tree folder by following index.ts file of tree and if you want to create web view you can follow index.ts of web. click on this for [Learn more](https://fuxnode.com/docs#Views)
 
-## Following extension guidelines
+## License
 
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+Copyright (c) 2023 FUXNODE. Licensed under MIT license, see [LICENSE](LICENSE) for the full license.

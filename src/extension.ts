@@ -1,7 +1,8 @@
 import * as vscode from 'vscode';
-import { assignContext } from './global/store';
+import { assignContext } from './global/middlewares/store';
 import registerCommands from './commands';
-import { default as Views, createWebViewPanel } from "./views"
+import { default as Views, createBasicWebViewPanel, createTreeViewProvider, createWebViewPanel } from "./views"
+import initialize from './functions/initialize';
 
 export function activate(context: vscode.ExtensionContext) {
 	/* 
@@ -18,7 +19,7 @@ export function activate(context: vscode.ExtensionContext) {
 			vscode.commands.registerCommand(reg.name, reg.value)
 		)
 	})
-	
+
 	/* 
 	Register the webview only. check the folder src/views/web/index.ts file for register.
 	make sure to add your command functions would be in correct folder (public or private).
@@ -30,6 +31,29 @@ export function activate(context: vscode.ExtensionContext) {
 			})
 		)
 	})
+	
+	//Basic Web view registers
+	Views.registerBasicWebviewCommand.map((detail) => {
+		createBasicWebViewPanel(context, detail.id, detail.html)
+	})
+
+	/* 
+	Register the tree only. check the folder src/views/tree/index.ts file for register.
+	*/
+	Views.registerTreeCommand.map((detail) => {
+		context.subscriptions.push(
+			vscode.commands.registerCommand(detail.command, () => {
+				createTreeViewProvider(detail.id, detail.data)
+			})
+		)
+	})
+
+	/*
+	Call the Initialization function after register all commands.
+	*/
+	initialize()
 }
 
-export function deactivate() { }
+export function deactivate() { 
+	
+}

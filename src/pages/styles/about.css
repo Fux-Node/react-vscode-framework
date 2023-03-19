@@ -1,3 +1,35 @@
-.designAbout {
-    color: rgb(0, 157, 105);
+.container-about {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.profile {
+    height: 30%;
+    border-radius: 20px;
+}
+
+.description {
+    width: 500px;
+}
+
+.para {
+    font-family: inter;
+    font-size: 15px;
+    text-align: justify;
+    font-variant: all-petite-caps;
+}
+
+.social {
+    width: 500px;
+}
+
+.social-group{
+    display: flex;
+    justify-content: space-between;
 }

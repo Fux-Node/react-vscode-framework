@@ -1,0 +1,52 @@
+.intro-img {
+    height: 20vw;
+}
+
+.container {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.input-box {
+    background-color: transparent;
+    border-color: orange;
+    padding: 20px;
+    margin-top: 8px;
+    color: orange;
+    margin-bottom: 8px;
+}
+
+.push-end {
+    margin-top: auto !important;
+    display: flex;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 70%;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.option-bg {
+    background-color: var(--vscode-editor-background);
+}
+
+.header {
+    background-color: var(--vscode-editor-foreground);
+    color: var(--vscode-editor-background);
+    padding: 20px;
+}
