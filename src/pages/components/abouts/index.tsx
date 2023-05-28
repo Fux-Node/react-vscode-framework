@@ -16,7 +16,7 @@ const SubAbout = () => {
         },
         {
             image: youtube,
-            url: "https://www.youtube.com/channel/UClqkweaAkQhKTJKWDS3Tlnw"
+            url: "https://www.youtube.com/channel/@fuxnode"
         },
         {
             image: discord,
